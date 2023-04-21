@@ -21,7 +21,8 @@
     --hightlight-on: #ffffff88;
 
     /* SIZING */
-    --sidebar-w: 320px;
+    --paper-w: 1080px;
+    --paper-h: 1528px;
 }
 
 body {
@@ -38,12 +39,13 @@ a:hover {
 }
 
 .app {
-    width: 1080px;
+    width: var(--paper-w);
     margin: 0 auto;
+    padding: 36px 32px 64px 32px;
 }
 
 .header {
-    padding: 36px 0;
+    padding-bottom: 36px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,7 +71,7 @@ a:hover {
 .header .odin-logo {
     width: 32px;
     height: 44px;
-    background: url('../assets/images/logo-odin-colored.svg') no-repeat center;
+    background: url('../assets/images/logo-odin-colored.svg') no-repeat center center;
     margin: 0 16px;
 }
 
@@ -111,9 +113,78 @@ a:hover {
 }
 
 .paper {
-    width: 100%;
-    height: 100%;
+    width: var(--paper-w);
+    height: var(--paper-h);
+    display: block;
+    background: var(--gray);
+}
+
+.section {
+    padding: 80px;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 0.7fr 0.4fr;
+}
+
+.section .left {
     display: flex;
     flex-direction: column;
-    background: var(--gray);
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.section .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.cv-header .name {
+    font-size: 3rem;
+    font-weight: 100;
+    margin-left: -4px;
+}
+
+.cv-header .position {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 64px;
+}
+
+.cv-header .website,
+.cv-header .about {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--green);
+    line-height: 1.8rem;
+}
+
+.cv-header .website {
+    font-weight: 700;
+}
+
+.cv-header .links {
+    line-height: 2.4rem;
+}
+
+.cv-header .links li {
+    padding-left: 32px;
+}
+
+.cv-header .phone {
+    background: url('../assets/images/link-phone.svg') no-repeat left center;
+}
+.cv-header .gmail {
+    background: url('../assets/images/link-gmail.svg') no-repeat left center;
+}
+.cv-header .location {
+    background: url('../assets/images/link-location.svg') no-repeat left center;
+}
+.cv-header .linkedin {
+    background: url('../assets/images/link-linkedin.svg') no-repeat left center;
+}
+.cv-header .github {
+    background: url('../assets/images/link-github.svg') no-repeat left center;
 }

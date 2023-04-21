@@ -1,11 +1,11 @@
 import Header from './components/Header';
-import Paper from './components/Paper';
+import CV from './components/CV';
 
 function App() {
     return (
         <div className="app">
             <Header />
-            <Paper />
+            <CV />
         </div>
     );
 }
