@@ -9,20 +9,17 @@
     /* COLORS */
     --white: #e6e6e6;
     --gray: #d5d5d5;
+    --gray-50: #d5d5d566;
     --yellow-lt: #eed9c3;
     --yellow: #e3b261;
     --green: #a78347;
     --green-dk: #353535;
     --blue: #111827;
 
-    --blue-tr: #111827dd;
-    --white-tr: #ffffff44;
-    --hightlight-off: #ffffff00;
-    --hightlight-on: #ffffff88;
-
     /* SIZING */
     --paper-w: 1080px;
     --paper-h: 1528px;
+    --paper-margin: 100px;
 }
 
 body {
@@ -36,6 +33,12 @@ body {
 a,
 a:hover {
     text-decoration: none;
+}
+
+.hidden {
+    display: none;
+    /* visibility: hidden; */
+    background: red;
 }
 
 .app {
@@ -115,58 +118,74 @@ a:hover {
 .paper {
     width: var(--paper-w);
     height: var(--paper-h);
-    display: block;
     background: var(--gray);
 }
 
-.section {
-    padding: 80px;
+.vertical-space {
+    height: var(--paper-margin);
+}
+
+.sections {
+    padding: 0 var(--paper-margin);
     display: grid;
     gap: 32px;
     grid-template-columns: 0.7fr 0.4fr;
 }
 
-.section .left {
+.cv-header .left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 16px;
 }
 
-.section .right {
+.cv-header .right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 16px;
 }
 
-.cv-header .name {
+.cv-header .person {
+    padding: 12px 8px;
+}
+
+.person .name {
     font-size: 3rem;
     font-weight: 100;
-    margin-left: -4px;
+    line-height: 3.2rem;
+    margin-left: -2px;
 }
 
-.cv-header .position {
+.person .position {
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 64px;
+    letter-spacing: 0.1rem;
+    margin-top: 10px;
 }
 
-.cv-header .website,
 .cv-header .about {
     font-size: 1.4rem;
     font-weight: 400;
     color: var(--green);
     line-height: 1.8rem;
+    /* margin-top: 32px; */
+    padding: 12px 8px;
 }
 
 .cv-header .website {
+    font-size: 1.4rem;
     font-weight: 700;
+    color: var(--green);
+    line-height: 1.8rem;
+    padding: 12px 8px;
 }
 
 .cv-header .links {
     line-height: 2.4rem;
+    margin-bottom: -10px;
+    padding: 12px 8px;
 }
 
 .cv-header .links li {
@@ -176,15 +195,209 @@ a:hover {
 .cv-header .phone {
     background: url('../assets/images/link-phone.svg') no-repeat left center;
 }
+
 .cv-header .gmail {
     background: url('../assets/images/link-gmail.svg') no-repeat left center;
 }
+
 .cv-header .location {
     background: url('../assets/images/link-location.svg') no-repeat left center;
 }
+
 .cv-header .linkedin {
     background: url('../assets/images/link-linkedin.svg') no-repeat left center;
 }
+
 .cv-header .github {
     background: url('../assets/images/link-github.svg') no-repeat left center;
+}
+
+.single-line {
+    display: flex;
+    gap: 4px;
+    margin-top: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: var(--green);
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 12px 8px;
+}
+
+.main {
+    margin-top: 32px;
+}
+
+.person:hover,
+.cv-header .about:hover,
+.cv-header .website:hover,
+.cv-header .links:hover,
+.section-title:hover,
+.section:hover {
+    background: var(--white);
+    border-radius: 4px;
+}
+
+.section {
+    position: relative;
+    font-size: 0.8rem;
+    padding: 12px 8px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.section p {
+    margin-top: 10px;
+    line-height: 1.2rem;
+}
+
+.section .title {
+    font-size: 1rem;
+}
+
+.section .btns {
+    position: absolute;
+    display: flex;
+    align-items: right;
+    gap: 4px;
+    margin-top: -24px;
+}
+
+.btns .btn-edit {
+    all: unset;
+    width: 32px;
+    aspect-ratio: 1/1;
+    background: url('../assets/images/icon-edit.svg') no-repeat center center;
+    background-color: var(--white);
+    border-radius: 50%;
+    outline: 2px solid var(--gray);
+    outline-offset: -4px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.btns .btn-check {
+    all: unset;
+    width: 32px;
+    aspect-ratio: 1/1;
+    background: url('../assets/images/icon-check.svg') no-repeat center center;
+    background-color: var(--white);
+    border-radius: 50%;
+    outline: 2px solid var(--gray);
+    outline-offset: -4px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.btns .btn-close {
+    all: unset;
+    width: 32px;
+    aspect-ratio: 1/1;
+    background: url('../assets/images/icon-close.svg') no-repeat center center;
+    background-color: var(--white);
+    border-radius: 50%;
+    outline: 2px solid var(--gray);
+    outline-offset: -4px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.btns .btn-edit:hover,
+.btns .btn-check:hover,
+.btns .btn-close:hover {
+    background-color: var(--yellow);
+    outline: 4px solid var(--white);
+}
+
+.section:hover .btns .btn-edit,
+.section:hover .btns .btn-check,
+.section:hover .btns .btn-close {
+    opacity: 1;
+}
+
+.edit-inputs {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    margin-top: -12px;
+    border-radius: 4px;
+    background: var(--white);
+    border-radius: 4px;
+}
+
+.edit-inputs textarea,
+.edit-inputs input {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1rem;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.edit-inputs input.input-title {
+    width: 80%;
+    height: 28px;
+    padding: 0px 8px;
+    margin: 0 4px;
+    margin-top: 4px;
+    background: var(--gray-50);
+    border-radius: 4px;
+}
+
+.edit-inputs .single-line {
+    width: 100%;
+    margin: 0;
+    padding: 4px;
+}
+
+.edit-inputs input.input-institution {
+    height: 20px;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-top: 0;
+    background: var(--gray-50);
+    border-radius: 4px;
+}
+
+.edit-inputs input.input-dates {
+    width: 40%;
+    height: 20px;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-right: 8px;
+    margin-top: 0;
+    background: var(--gray-50);
+    border-radius: 4px;
+}
+
+.edit-inputs textarea.input-details {
+    width: calc(100% - 8px);
+    height: calc(100% - 64px);
+    margin: 0 4px 4px 4px;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    line-height: 1.2rem;
+    background: var(--gray-50);
+    border-radius: 4px;
+}
+
+.edit-inputs input:focus,
+.edit-inputs textarea:focus {
+    outline: none;
+    border: none;
+    background: var(--yellow-lt);
 }
