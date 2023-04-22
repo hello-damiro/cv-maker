@@ -11,28 +11,42 @@ function Links({ phone, gmail, location, linkedin, github }) {
     const [inputLocation, setInputLocation] = useState(location);
     const [inputLinkedin, setInputLinkedin] = useState(linkedin);
     const [inputGithub, setInputGithub] = useState(github);
+
     const handlePhoneChange = (e) => setInputPhone(e.currentTarget.value);
     const handleGmailChange = (e) => setInputGmail(e.currentTarget.value);
     const handleLocationChange = (e) => setInputLocation(e.currentTarget.value);
     const handleLinkedinChange = (e) => setInputLinkedin(e.currentTarget.value);
     const handleGithubChange = (e) => setInputGithub(e.currentTarget.value);
 
-    const radioClicked = () => {
-        console.log('radio clicked');
-    };
+    let [hiddenPhone, setHiddenPhone] = useState(true);
+    let [hiddenGmail, setHiddenGmail] = useState(true);
+    let [hiddenLocation, setHiddenLocation] = useState(true);
+    let [hiddenLinkedin, setHiddenLinkedin] = useState(true);
+    let [hiddenGithub, setHiddenGithub] = useState(true);
+
+    const handleHiddenPhone = (e) => setHiddenPhone(!hiddenPhone);
+    const handleHiddenGmail = (e) => setHiddenGmail(!hiddenGmail);
+    const handleHiddenLocation = (e) => setHiddenLocation(!hiddenLocation);
+    const handleHiddenLinkedin = (e) => setHiddenLinkedin(!hiddenLinkedin);
+    const handleHiddenGithub = (e) => setHiddenGithub(!hiddenGithub);
 
     return (
         <div className="links">
             <ul className="content">
-                <li className="phone">{inputPhone}</li>
-                <li className="gmail">{inputGmail}</li>
-                <li className="location">{inputLocation}</li>
-                <li className="linkedin">{inputLinkedin}</li>
-                <li className="github">{inputGithub}</li>
+                {hiddenPhone ? <li className="phone">{inputPhone}</li> : null}
+                {hiddenGmail ? <li className="gmail">{inputGmail}</li> : null}
+                {hiddenLocation ? <li className="location">{inputLocation}</li> : null}
+                {hiddenLinkedin ? <li className="linkedin">{inputLinkedin}</li> : null}
+                {hiddenGithub ? <li className="github">{inputGithub}</li> : null}
             </ul>
             <div className={`edit-inputs ${editMode ? null : 'hidden'}`}>
                 <div className="link-group">
-                    <input onChange={radioClicked()} type="radio" value="off" />
+                    <input
+                        onChange={handleHiddenPhone}
+                        type="checkbox"
+                        value="hide"
+                        checked={hiddenPhone}
+                    />
                     <input
                         type="text"
                         onChange={handlePhoneChange}
@@ -42,7 +56,12 @@ function Links({ phone, gmail, location, linkedin, github }) {
                     />
                 </div>
                 <div className="link-group">
-                    <input onChange={radioClicked()} type="radio" value="off" />
+                    <input
+                        onChange={handleHiddenGmail}
+                        type="checkbox"
+                        value="hide"
+                        checked={hiddenGmail}
+                    />
                     <input
                         type="text"
                         onChange={handleGmailChange}
@@ -52,7 +71,12 @@ function Links({ phone, gmail, location, linkedin, github }) {
                     />
                 </div>
                 <div className="link-group">
-                    <input onChange={radioClicked()} type="radio" value="off" />
+                    <input
+                        onChange={handleHiddenLocation}
+                        type="checkbox"
+                        value="hide"
+                        checked={hiddenLocation}
+                    />
                     <input
                         type="text"
                         onChange={handleLocationChange}
@@ -62,7 +86,12 @@ function Links({ phone, gmail, location, linkedin, github }) {
                     />
                 </div>
                 <div className="link-group">
-                    <input onChange={radioClicked()} type="radio" value="off" />
+                    <input
+                        onChange={handleHiddenLinkedin}
+                        type="checkbox"
+                        value="hide"
+                        checked={hiddenLinkedin}
+                    />
                     <input
                         type="text"
                         onChange={handleLinkedinChange}
@@ -72,7 +101,12 @@ function Links({ phone, gmail, location, linkedin, github }) {
                     />
                 </div>
                 <div className="link-group">
-                    <input onChange={radioClicked()} type="radio" value="off" />
+                    <input
+                        onChange={handleHiddenGithub}
+                        type="checkbox"
+                        value="hide"
+                        checked={hiddenGithub}
+                    />
                     <input
                         type="text"
                         onChange={handleGithubChange}

@@ -145,7 +145,7 @@ a:hover {
     box-shadow: 0 0 0 1pt var(--yellow);
 }
 
-.edit-inputs input[type='radio'] {
+.edit-inputs input[type='checkbox'] {
     -webkit-appearance: none;
     appearance: none;
     background-color: var(--white);
@@ -157,7 +157,7 @@ a:hover {
     margin: 0 0 0 14px;
 }
 
-.edit-inputs input[type='radio']:checked {
+.edit-inputs input[type='checkbox']:checked {
     background-color: var(--yellow);
 }
 
