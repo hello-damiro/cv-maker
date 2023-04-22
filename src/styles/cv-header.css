@@ -194,10 +194,15 @@
 
 .links .edit-inputs {
     margin-top: 12px;
+    width: 100%;
 }
 
-.links .edit-inputs input {
-    padding: 6.7px 0;
+.links .edit-inputs .link-group {
+    padding: 2.45px 0;
+    padding-left: 0px;
+}
+
+.links .edit-inputs .link-group input[type='text'] {
     padding-left: 40px;
 }
 

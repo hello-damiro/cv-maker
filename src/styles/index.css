@@ -113,7 +113,7 @@ a:hover {
 }
 
 .edit-inputs textarea,
-.edit-inputs input {
+.edit-inputs input[type='text'] {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 1rem;
     border: none;
@@ -121,7 +121,7 @@ a:hover {
     resize: none;
 }
 
-.edit-inputs input {
+.edit-inputs input[type='text'] {
     width: calc(100% - 8px);
     margin: 2px 4px;
     padding: 4px 8px;
@@ -139,8 +139,30 @@ a:hover {
     border-radius: 2px;
 }
 
-.edit-inputs input:focus,
+.edit-inputs input[type='text']:focus,
 .edit-inputs textarea:focus {
     outline: none;
     box-shadow: 0 0 0 1pt var(--yellow);
+}
+
+.edit-inputs input[type='radio'] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--white);
+    width: 18px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px var(--yellow) solid;
+    margin: 0 0 0 14px;
+}
+
+.edit-inputs input[type='radio']:checked {
+    background-color: var(--yellow);
+}
+
+.link-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

@@ -17,6 +17,10 @@ function Links({ phone, gmail, location, linkedin, github }) {
     const handleLinkedinChange = (e) => setInputLinkedin(e.currentTarget.value);
     const handleGithubChange = (e) => setInputGithub(e.currentTarget.value);
 
+    const radioClicked = () => {
+        console.log('radio clicked');
+    };
+
     return (
         <div className="links">
             <ul className="content">
@@ -27,36 +31,56 @@ function Links({ phone, gmail, location, linkedin, github }) {
                 <li className="github">{inputGithub}</li>
             </ul>
             <div className={`edit-inputs ${editMode ? null : 'hidden'}`}>
-                <input
-                    onChange={handlePhoneChange}
-                    className="input-phone"
-                    placeholder="+ 123 456 7890"
-                    value={inputPhone}
-                />
-                <input
-                    onChange={handleGmailChange}
-                    className="input-gmail"
-                    placeholder="you@gmail.com"
-                    value={inputGmail}
-                />
-                <input
-                    onChange={handleLocationChange}
-                    className="input-location"
-                    placeholder="Some City, USA"
-                    value={inputLocation}
-                />
-                <input
-                    onChange={handleLinkedinChange}
-                    className="input-linkedin"
-                    placeholder="linkedin/@some-handle"
-                    value={inputLinkedin}
-                />
-                <input
-                    onChange={handleGithubChange}
-                    className="input-github"
-                    placeholder="github.com/@some-handle"
-                    value={inputGithub}
-                />
+                <div className="link-group">
+                    <input onChange={radioClicked()} type="radio" value="off" />
+                    <input
+                        type="text"
+                        onChange={handlePhoneChange}
+                        className="input-phone"
+                        placeholder="+ 123 456 7890"
+                        value={inputPhone}
+                    />
+                </div>
+                <div className="link-group">
+                    <input onChange={radioClicked()} type="radio" value="off" />
+                    <input
+                        type="text"
+                        onChange={handleGmailChange}
+                        className="input-gmail"
+                        placeholder="you@gmail.com"
+                        value={inputGmail}
+                    />
+                </div>
+                <div className="link-group">
+                    <input onChange={radioClicked()} type="radio" value="off" />
+                    <input
+                        type="text"
+                        onChange={handleLocationChange}
+                        className="input-location"
+                        placeholder="Some City, USA"
+                        value={inputLocation}
+                    />
+                </div>
+                <div className="link-group">
+                    <input onChange={radioClicked()} type="radio" value="off" />
+                    <input
+                        type="text"
+                        onChange={handleLinkedinChange}
+                        className="input-linkedin"
+                        placeholder="linkedin/@some-handle"
+                        value={inputLinkedin}
+                    />
+                </div>
+                <div className="link-group">
+                    <input onChange={radioClicked()} type="radio" value="off" />
+                    <input
+                        type="text"
+                        onChange={handleGithubChange}
+                        className="input-github"
+                        placeholder="github.com/@some-handle"
+                        value={inputGithub}
+                    />
+                </div>
             </div>
             <EditButtons modeStatus={(status) => handleStatus(status)} />
         </div>
