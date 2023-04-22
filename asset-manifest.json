@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cv-maker/static/css/main.53690ab8.css",
-    "main.js": "/cv-maker/static/js/main.456be563.js",
+    "main.css": "/cv-maker/static/css/main.5babf940.css",
+    "main.js": "/cv-maker/static/js/main.f1f34406.js",
     "static/media/link-github.svg": "/cv-maker/static/media/link-github.69a2cfcc41ae28d5128e.svg",
     "static/media/logo-odin-colored.svg": "/cv-maker/static/media/logo-odin-colored.5e2d5d2b362de7c2d14c.svg",
     "static/media/link-linkedin.svg": "/cv-maker/static/media/link-linkedin.c9f2b5bce9f61e2aed01.svg",
@@ -12,11 +12,11 @@
     "static/media/link-phone.svg": "/cv-maker/static/media/link-phone.fd59b4362e8eba8407fd.svg",
     "static/media/link-gmail.svg": "/cv-maker/static/media/link-gmail.fc016234f0b53d202af4.svg",
     "static/media/icon-check.svg": "/cv-maker/static/media/icon-check.4ccf08d6d68f69ee3e6a.svg",
-    "main.53690ab8.css.map": "/cv-maker/static/css/main.53690ab8.css.map",
-    "main.456be563.js.map": "/cv-maker/static/js/main.456be563.js.map"
+    "main.5babf940.css.map": "/cv-maker/static/css/main.5babf940.css.map",
+    "main.f1f34406.js.map": "/cv-maker/static/js/main.f1f34406.js.map"
   },
   "entrypoints": [
-    "static/css/main.53690ab8.css",
-    "static/js/main.456be563.js"
+    "static/css/main.5babf940.css",
+    "static/js/main.f1f34406.js"
   ]
 }
