@@ -1,9 +1,9 @@
 import React from 'react';
-import Section from './Section';
+import Section from './shared/Section';
 
 function CVMain() {
     return (
-        <div className="main sections">
+        <div className="cv-main">
             <div className="left">
                 <div className="section-title">Experience</div>
                 <Section

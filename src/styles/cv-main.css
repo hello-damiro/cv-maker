@@ -1,0 +1,126 @@
+.cv-main {
+    display: flex;
+    gap: 32px;
+    margin: 0 var(--paper-margin);
+}
+
+.cv-main .left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 16px; */
+}
+
+.cv-main .right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 16px; */
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 16px;
+}
+
+.section-title {
+    /* background: red; */
+    display: flex;
+    position: relative;
+    padding: 12px;
+}
+
+.section {
+    width: 100%;
+    background: var(--gray);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.section .content {
+    /* background: red; */
+    padding: 12px;
+}
+
+.section .edit-inputs {
+    position: absolute;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+}
+
+.section .btns {
+    position: absolute;
+    margin-left: calc(100% - 72px);
+    display: flex;
+    gap: 4px;
+    align-items: right;
+    margin-top: -16px;
+}
+
+.section:hover {
+    background: var(--white);
+    border-radius: 4px;
+}
+
+.section:hover .btns .btn-edit,
+.section:hover .btns .btn-check,
+.section:hover .btns .btn-close {
+    opacity: 1;
+}
+
+/* SPECIFIC STYLES */
+
+.section .title {
+    /* background: red; */
+    font-size: 1.2rem;
+}
+
+.section input[type='text'].input-title {
+    /* background: red; */
+    font-size: 1.2rem;
+    margin-top: 6px;
+}
+
+.section .dates,
+.section .institution {
+    /* background: red; */
+    font-size: 0.8rem;
+    padding-bottom: 8px;
+}
+
+.section input[type='text'].input-dates,
+.section input[type='text'].input-institution {
+    /* background: red; */
+    height: 24px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+.section input[type='text'].input-institution {
+    margin-right: -2px;
+    width: 65%;
+}
+
+.section input[type='text'].input-dates {
+    width: 35%;
+}
+
+.section .details {
+    min-height: 30px;
+    font-size: 0.9rem;
+}
+
+.section .input-details {
+    height: calc(100% - 80px);
+    min-height: 22px;
+    font-size: 0.9rem;
+    padding-bottom: 0px;
+    line-height: 1.2rem;
+}

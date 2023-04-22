@@ -1,8 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
+import EditButtons from './EditButtons';
 
 function Section({ title, institution, dates, details }) {
     const [editMode, setEditMode] = useState(false);
+    const handleStatus = (status) => setEditMode(status);
+
     const [inputTitle, setInputTitle] = useState(title);
     const [inputInstitution, setInputInstitution] = useState(institution);
     const [inputDates, setInputDates] = useState(dates);
@@ -11,9 +14,6 @@ function Section({ title, institution, dates, details }) {
     const handleInstitutionChange = (e) => setInputInstitution(e.currentTarget.value);
     const handleDatesChange = (e) => setInputDates(e.currentTarget.value);
     const handleDetailsChange = (e) => setInputDetails(e.currentTarget.value);
-    const handleEditBtn = () => setEditMode(true);
-    const handleCheckBtn = () => setEditMode(false);
-    const handleCloseBtn = () => console.log('handleCloseBtn: ');
 
     return (
         <div className="section">
@@ -27,6 +27,7 @@ function Section({ title, institution, dates, details }) {
             </div>
             <div className={`edit-inputs ${editMode ? null : 'hidden'}`}>
                 <input
+                    type="text"
                     onChange={handleTitleChange}
                     className="input-title"
                     placeholder="Title"
@@ -34,12 +35,14 @@ function Section({ title, institution, dates, details }) {
                 />
                 <div className="single-line">
                     <input
+                        type="text"
                         onChange={handleInstitutionChange}
                         className="input-institution"
                         placeholder="Institution"
                         value={inputInstitution}
                     />
                     <input
+                        type="text"
                         onChange={handleDatesChange}
                         className="input-dates"
                         placeholder="Years"
@@ -54,19 +57,7 @@ function Section({ title, institution, dates, details }) {
                     value={inputDetails}
                 />
             </div>
-            <div className="btns">
-                {editMode ? null : (
-                    <button onClick={() => handleEditBtn()} className="btn-edit" type="button" />
-                )}
-                {!editMode ? null : (
-                    <button
-                        onClick={() => handleCheckBtn()}
-                        className={`btn-check ${!editMode ? 'hidden' : ''}`}
-                        type="button"
-                    />
-                )}
-                <button onClick={() => handleCloseBtn()} className="btn-close" type="button" />
-            </div>
+            <EditButtons modeStatus={(status) => handleStatus(status)} />
         </div>
     );
 }

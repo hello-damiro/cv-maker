@@ -2,7 +2,7 @@
 @import url('reset.css');
 @import url('header.css');
 @import url('cv-header.css');
-/* @import url('main-header.css'); */
+@import url('cv-main.css');
 
 :root {
     /* SYSTEM FONTS */
@@ -62,11 +62,11 @@ a:hover {
 .single-line {
     display: flex;
     gap: 4px;
-    margin-top: 6px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
     color: var(--green);
+    margin-top: 2px;
 }
 
 .btns .btn-edit {

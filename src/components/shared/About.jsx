@@ -18,7 +18,7 @@ function About({ about }) {
                 <textarea
                     onChange={handleAboutChange}
                     className="input-about"
-                    placeholder="Details here ..."
+                    placeholder="Introduction here ..."
                     value={inputAbout}
                 />
             </div>
