@@ -4,11 +4,13 @@
 
 The Odin Project - Intermediate JS project
 
+SEE LIVE PROGRESS [HERE](http://hello-damiro.github.io/cv-maker)
+
 </br>
 
 **Day 1:** Design UI with figma, keeping in mind the _item 2 of the challenges_. First time to use `create-react-app`. Edit some files in `public` and stripped everything in `src`
 
-**Day 2:** Worked with css to layout the CV. Study in-depth what `useState` is.
+**Day 2:** Worked with css to layout the CV. Study in-depth what `useState` is. Since there are numerous ways to style components in react, one is forced to design while coding. Thats my current case. I guess its just because I'm still exploring react.
 
 </br>
 
