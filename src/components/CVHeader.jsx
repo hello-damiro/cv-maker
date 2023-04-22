@@ -1,33 +1,35 @@
 import React from 'react';
+import About from './shared/About';
+import Person from './shared/Person';
+import Website from './shared/Website';
+import Links from './shared/Links';
 
 function CVHeader() {
     return (
         <div>
             <div className="vertical-space"></div>
-            <div className="sections cv-header">
+            <div className="cv-header">
                 <div className="left">
-                    <div className="person">
-                        <h1 className="name">Edward</h1>
-                        <h1 className="name">Smith</h1>
-                        <h2 className="position">FULL STACK FRONT END DEV</h2>
-                    </div>
-                    <div className="about">
-                        <p>
-                            Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-                            libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
-                            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        </p>
-                    </div>
+                    <Person
+                        firstname={'Samuelle'}
+                        lastname={'Loucas'}
+                        position={'Senior Truck Driver'}
+                    />
+                    <About
+                        about={
+                            'Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
+                        }
+                    />
                 </div>
                 <div className="right">
-                    <h3 className="website">www.ed-smith.dev</h3>
-                    <ul className="links">
-                        <li className="phone">+56 1234 4567</li>
-                        <li className="gmail">ed.smith@gmail.com</li>
-                        <li className="location">New York, UK</li>
-                        <li className="linkedin">linkedin.com/ed-smith</li>
-                        <li className="github">github.com/ed-smith</li>
-                    </ul>
+                    <Website website={'www.ed-smith.dev'} />
+                    <Links
+                        phone={'+56 1234 4567'}
+                        gmail={'ed.smith@gmail.com'}
+                        location={'New York, UK'}
+                        linkedin={'linkedin.com/ed-smith'}
+                        github={'github.com/ed-smith'}
+                    />
                 </div>
             </div>
         </div>

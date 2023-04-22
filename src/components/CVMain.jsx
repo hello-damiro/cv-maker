@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from './shared/Section';
+import Section from './Section';
 
 function CVMain() {
     return (

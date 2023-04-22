@@ -1,0 +1,245 @@
+.sections {
+    padding: 0 var(--paper-margin);
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 0.7fr 0.4fr;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 12px 8px;
+}
+
+.section p {
+    margin-top: 10px;
+    line-height: 1.2rem;
+}
+
+.section .title {
+    font-size: 1rem;
+}
+
+.person:hover,
+.cv-header .about:hover,
+.cv-header .website:hover,
+.cv-header .links:hover,
+.section-title:hover,
+.section:hover {
+    background: var(--white);
+    border-radius: 4px;
+}
+
+.person,
+.about,
+.section {
+    position: relative;
+    font-size: 0.8rem;
+    padding: 12px 8px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.person .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.btns {
+    position: absolute;
+    display: flex;
+    align-items: right;
+    gap: 4px;
+    margin-top: -24px;
+}
+
+.btns .btn-edit {
+    all: unset;
+    width: 32px;
+    aspect-ratio: 1/1;
+    background: url('../assets/images/icon-edit.svg') no-repeat center center;
+    background-color: var(--white);
+    border-radius: 50%;
+    outline: 2px solid var(--gray);
+    outline-offset: -4px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.btns .btn-check {
+    all: unset;
+    width: 32px;
+    aspect-ratio: 1/1;
+    background: url('../assets/images/icon-check.svg') no-repeat center center;
+    background-color: var(--white);
+    border-radius: 50%;
+    outline: 2px solid var(--gray);
+    outline-offset: -4px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.btns .btn-close {
+    all: unset;
+    width: 32px;
+    aspect-ratio: 1/1;
+    background: url('../assets/images/icon-close.svg') no-repeat center center;
+    background-color: var(--white);
+    border-radius: 50%;
+    outline: 2px solid var(--gray);
+    outline-offset: -4px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.btns .btn-edit:hover,
+.btns .btn-check:hover,
+.btns .btn-close:hover {
+    background-color: var(--yellow);
+    outline: 4px solid var(--white);
+}
+
+.person:hover .btns .btn-edit,
+.person:hover .btns .btn-check,
+.person:hover .btns .btn-close,
+.about:hover .btns .btn-edit,
+.about:hover .btns .btn-check,
+.about:hover .btns .btn-close,
+.section:hover .btns .btn-edit,
+.section:hover .btns .btn-check,
+.section:hover .btns .btn-close {
+    opacity: 1;
+}
+
+.edit-inputs {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    margin-top: -12px;
+    border-radius: 4px;
+    background: var(--white);
+    border-radius: 4px;
+}
+
+.edit-inputs textarea,
+.edit-inputs input {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1rem;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.edit-inputs input.input-firstname,
+.edit-inputs input.input-lastname {
+    width: 80%;
+    height: 52px;
+    padding: 0px 8px;
+    margin: 0 4px;
+    margin-top: 4px;
+    background: var(--gray-50);
+    border-radius: 4px;
+    font-size: 2.4rem;
+    font-weight: 100;
+    line-height: 3.2rem;
+}
+
+.edit-inputs input.input-position {
+    width: calc(100% - 8px);
+    height: 20px;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    background: var(--gray-50);
+    border-radius: 4px;
+    margin: 0 4px;
+
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 10px;
+}
+
+.edit-inputs input.input-title {
+    width: 80%;
+    height: 28px;
+    padding: 0px 8px;
+    margin: 0 4px;
+    margin-top: 4px;
+    background: var(--gray-50);
+    border-radius: 4px;
+}
+
+.edit-inputs .single-line {
+    width: 100%;
+    margin: 0;
+    padding: 4px;
+}
+
+.edit-inputs input.input-institution {
+    height: 20px;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-top: 0;
+    background: var(--gray-50);
+    border-radius: 4px;
+}
+
+.edit-inputs input.input-dates {
+    width: 40%;
+    height: 20px;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-right: 8px;
+    margin-top: 0;
+    background: var(--gray-50);
+    border-radius: 4px;
+}
+
+.edit-inputs textarea.input-details {
+    width: calc(100% - 8px);
+    height: calc(100% - 64px);
+    margin: 0 4px 4px 4px;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    line-height: 1.2rem;
+    background: var(--gray-50);
+    border-radius: 4px;
+    resize: none;
+}
+
+.edit-inputs textarea.input-about {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    margin: 4px;
+    padding: 8px;
+    line-height: 1.2rem;
+    background: var(--gray-50);
+    border-radius: 4px;
+    resize: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--green);
+    line-height: 1.8rem;
+}
+
+.edit-inputs input:focus,
+.edit-inputs textarea:focus {
+    outline: none;
+    border: none;
+    background: var(--yellow-lt);
+}

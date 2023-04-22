@@ -8,6 +8,8 @@ The Odin Project - Intermediate JS project
 
 **Day 1:** Design UI with figma, keeping in mind the _item 2 of the challenges_. First time to use `create-react-app`. Edit some files in `public` and stripped everything in `src`
 
+**Day 2:** Worked with css to layout the CV. Study in-depth what `useState` is.
+
 </br>
 
 ## Project Screenshot

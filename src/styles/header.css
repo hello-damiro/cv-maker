@@ -1,0 +1,67 @@
+.header {
+    padding-bottom: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--gray);
+}
+
+.header a {
+    color: var(--gray);
+}
+
+.header a:hover {
+    color: var(--yellow);
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.header .odin-logo {
+    width: 32px;
+    height: 44px;
+    background: url('../assets/images/logo-odin-colored.svg') no-repeat center center;
+    margin: 0 16px;
+}
+
+.logo .title a {
+    font-weight: 700;
+    color: var(--yellow);
+}
+
+.logo .title a:hover {
+    font-weight: 700;
+    color: var(--yellow-lt);
+}
+
+.logo .title:hover {
+    color: var(--yellow-lt);
+}
+
+.header .options {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.options .about {
+    width: 24px;
+    aspect-ratio: 1/1;
+    background: var(--gray);
+    color: var(--blue);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.options .about:hover {
+    background: var(--yellow);
+}

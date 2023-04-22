@@ -1,0 +1,222 @@
+.cv-header {
+    display: flex;
+    gap: 32px;
+    margin: 0 var(--paper-margin);
+}
+
+.cv-header .left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.cv-header .right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.person {
+    width: 100%;
+    height: 160px;
+    background: var(--gray);
+    display: flex;
+    position: relative;
+}
+
+.person .content {
+    width: calc(100% - 24px);
+    padding: 12px;
+}
+
+.person .edit-inputs {
+    position: absolute;
+    width: 100%;
+    background: var(--white);
+    border-radius: 4px;
+    padding: 2px 0;
+}
+
+.about {
+    width: 100%;
+    background: var(--gray);
+    display: flex;
+    position: relative;
+}
+
+.about .content {
+    width: calc(100% - 24px);
+    min-height: 24px;
+    padding: 12px;
+}
+
+.about .edit-inputs {
+    position: absolute;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+}
+
+.website {
+    width: 100%;
+    min-height: 46px;
+    background: var(--gray);
+    display: flex;
+    position: relative;
+}
+
+.website .content {
+    width: calc(100% - 24px);
+    min-height: 10px;
+    padding: 12px;
+}
+
+.website .edit-inputs {
+    position: absolute;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+}
+
+.links {
+    width: 100%;
+    background: var(--gray);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.links .content {
+    min-height: 80px;
+    padding: 12px;
+}
+
+.links .edit-inputs {
+    position: absolute;
+    border-radius: 4px;
+    /* width: 100%; */
+    /* height: 100%; */
+    background: var(--white);
+}
+
+.links .btns,
+.website .btns,
+.about .btns,
+.person .btns {
+    position: absolute;
+    margin-left: calc(100% - 72px);
+    display: flex;
+    gap: 4px;
+    align-items: right;
+    margin-top: -16px;
+}
+
+.links:hover,
+.website:hover,
+.person:hover,
+.about:hover {
+    background: var(--white);
+    border-radius: 4px;
+}
+
+.links:hover .btns .btn-edit,
+.links:hover .btns .btn-check,
+.links:hover .btns .btn-close,
+.website:hover .btns .btn-edit,
+.website:hover .btns .btn-check,
+.website:hover .btns .btn-close,
+.person:hover .btns .btn-edit,
+.person:hover .btns .btn-check,
+.person:hover .btns .btn-close,
+.about:hover .btns .btn-edit,
+.about:hover .btns .btn-check,
+.about:hover .btns .btn-close {
+    opacity: 1;
+}
+
+/* DETAILED STYLING */
+
+.person .name {
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 3.2rem;
+    margin-left: -2px;
+}
+
+.person .input-lastname,
+.person .input-firstname {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.person .input-position,
+.person .position {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 16px;
+}
+
+.person .position {
+    margin-top: 16px;
+}
+
+.about .input-about,
+.about .content {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--green);
+    line-height: 1.8rem;
+}
+
+.website .input-website,
+.website .content {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--green);
+}
+.website .input-website {
+    margin-top: 4px;
+    padding: 4px 8px;
+}
+
+.links .content li {
+    padding: 8px 0;
+    padding-left: 32px;
+}
+
+.links .edit-inputs {
+    margin-top: 12px;
+}
+
+.links .edit-inputs input {
+    padding: 6.7px 0;
+    padding-left: 40px;
+}
+
+.links .content .phone {
+    background: url('../assets/images/link-phone.svg') no-repeat left center;
+}
+
+.links .content .gmail {
+    background: url('../assets/images/link-gmail.svg') no-repeat left center;
+}
+
+.links .content .location {
+    background: url('../assets/images/link-location.svg') no-repeat left center;
+}
+
+.links .content .linkedin {
+    background: url('../assets/images/link-linkedin.svg') no-repeat left center;
+}
+
+.links .content .github {
+    background: url('../assets/images/link-github.svg') no-repeat left center;
+}

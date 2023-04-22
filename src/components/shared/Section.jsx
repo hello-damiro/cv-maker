@@ -49,7 +49,7 @@ function Section({ title, institution, dates, details }) {
                 <textarea
                     onChange={handleDetailsChange}
                     className="input-details"
-                    rows="3"
+                    // rows="3"
                     placeholder="Details here ..."
                     value={inputDetails}
                 />
