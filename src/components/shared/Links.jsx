@@ -39,7 +39,7 @@ function Links({ phone, gmail, location, linkedin, github }) {
                 {hiddenLinkedin ? <li className="linkedin">{inputLinkedin}</li> : null}
                 {hiddenGithub ? <li className="github">{inputGithub}</li> : null}
             </ul>
-            <div className={`edit-inputs ${editMode ? null : 'hidden'}`}>
+            <div className={`edit-inputs ${!editMode ? 'hidden' : ''}`}>
                 <div className="link-group">
                     <input
                         onChange={handleHiddenPhone}

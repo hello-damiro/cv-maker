@@ -149,13 +149,6 @@
     margin-left: -2px;
 }
 
-.person .input-lastname,
-.person .input-firstname {
-    font-size: 2rem;
-    font-weight: 100;
-}
-
-.person .input-position,
 .person .position {
     font-size: 1rem;
     font-weight: 700;
@@ -164,8 +157,18 @@
     margin-top: 16px;
 }
 
-.person .position {
-    margin-top: 16px;
+.person input[type='text'].input-firstname,
+.person input[type='text'].input-lastname {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.person input[type='text'].input-position {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 14px;
 }
 
 .about .input-about,
@@ -176,13 +179,15 @@
     line-height: 1.8rem;
 }
 
-.website .input-website,
 .website .content {
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--green);
 }
-.website .input-website {
+.website .edit-inputs input[type='text'] {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--green);
     margin-top: 4px;
     padding: 4px 8px;
 }

@@ -14,7 +14,7 @@ function About({ about }) {
             <div className="content">
                 <p>{inputAbout}</p>
             </div>
-            <div className={`edit-inputs ${editMode ? null : 'hidden'}`}>
+            <div className={`edit-inputs ${!editMode ? 'hidden' : ''}`}>
                 <textarea
                     onChange={handleAboutChange}
                     className="input-about"

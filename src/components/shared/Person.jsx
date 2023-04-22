@@ -20,20 +20,23 @@ function Person({ firstname, lastname, position }) {
                 <h1 className="name">{inputLastname}</h1>
                 <h2 className="position">{inputPosition}</h2>
             </div>
-            <div className={`edit-inputs ${editMode ? null : 'hidden'}`}>
+            <div className={`edit-inputs ${!editMode ? 'hidden' : ''}`}>
                 <input
+                    type="text"
                     onChange={handleFirstnameChange}
                     className="input-firstname"
                     placeholder="Firstname"
                     value={inputFirstname}
                 />
                 <input
+                    type="text"
                     onChange={handleLastnameChange}
                     className="input-lastname"
                     placeholder="Lastname"
                     value={inputLastname}
                 />
                 <input
+                    type="text"
                     onChange={handlePositionChange}
                     className="input-position"
                     placeholder="Position"

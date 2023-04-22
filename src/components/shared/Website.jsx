@@ -14,8 +14,9 @@ function Website({ website }) {
             <div className="content">
                 <h3>{inputWebsite}</h3>
             </div>
-            <div className={`edit-inputs ${editMode ? null : 'hidden'}`}>
+            <div className={`edit-inputs ${!editMode ? 'hidden' : ''}`}>
                 <input
+                    type="text"
                     onChange={handleWebsiteChange}
                     className="input-website"
                     placeholder="www.website.com"
