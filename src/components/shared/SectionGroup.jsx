@@ -6,10 +6,40 @@ function SectionGroup({ sectionTitle }) {
     let [editMode, setEditMode] = useState(false);
     const handleBtn = () => setEditMode((editMode = !editMode));
     const handleCloseBtn = () => console.log('CLOSE');
-    const handlePlusBtn = () => console.log('ADD');
 
     const [inputSectionTitle, setInputSectionTitle] = useState(sectionTitle);
     const handleSectionTitleChange = (e) => setInputSectionTitle(e.currentTarget.value);
+
+    const [index, setIndex] = useState(0);
+    const [sections, setSections] = useState([]);
+
+    const handlePlusBtn = () => {
+        console.log('ADD');
+        setSections([...sections, renderTemplateSection()]);
+    };
+
+    const handleDeleteSection = (index) => {
+        console.log('DEL', index);
+        setSections(sections.filter((section, i) => index !== i));
+    };
+
+    const renderTemplateSection = () => {
+        const title = 'Awesome title';
+        setIndex(index + 1);
+        return (
+            <Section
+                key={index}
+                index={index}
+                title={index + ' - ' + title}
+                institution={'Alphabet Inc'}
+                dates={'2021 - Present'}
+                details={
+                    'Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per  consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent inceptos himenaeos.'
+                }
+                deleteThis={(id) => handleDeleteSection(id)}
+            />
+        );
+    };
 
     return (
         <div>
@@ -45,32 +75,7 @@ function SectionGroup({ sectionTitle }) {
                     <button onClick={() => handleCloseBtn()} className="btn-close" type="button" />
                 </div>
             </div>
-            <div className="sections">
-                <Section
-                    title={'Senior Frond-end Developer'}
-                    institution={'Alphabet Inc'}
-                    dates={'2021 - Present'}
-                    details={
-                        'Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per  consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent inceptos himenaeos.'
-                    }
-                />
-                <Section
-                    title={'Senior Frond-end Developer'}
-                    institution={'Alphabet Inc'}
-                    dates={'2021 - Present'}
-                    details={
-                        'Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per  consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent inceptos himenaeos.'
-                    }
-                />
-                <Section
-                    title={'Senior Frond-end Developer'}
-                    institution={'Alphabet Inc'}
-                    dates={'2021 - Present'}
-                    details={
-                        'Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per  consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent inceptos himenaeos.'
-                    }
-                />
-            </div>
+            <div className="sections">{sections}</div>
         </div>
     );
 }

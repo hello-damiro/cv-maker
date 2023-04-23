@@ -2,13 +2,15 @@ import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-function EditButtons({ modeStatus }) {
+function EditButtons({ index, modeStatus, deleteIndex }) {
     let [editMode, setEditMode] = useState(false);
     const handleBtn = () => {
         setEditMode((editMode = !editMode));
         modeStatus(editMode);
     };
-    const handleCloseBtn = () => console.log('CLOSE');
+    const handleCloseBtn = () => {
+        deleteIndex(index);
+    };
     return (
         <div className="btns">
             {!editMode ? (

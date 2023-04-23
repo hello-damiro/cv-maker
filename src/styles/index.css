@@ -78,6 +78,7 @@ a:hover {
     align-items: right;
     justify-content: flex-end;
     margin-top: -16px;
+    z-index: 30;
 }
 
 .btns .btn-edit {
@@ -135,6 +136,11 @@ a:hover {
 .btns .btn-close:hover {
     background-color: var(--yellow);
     outline: 4px solid var(--white);
+}
+
+.edit-inputs {
+    min-height: 116px;
+    z-index: 20;
 }
 
 .edit-inputs textarea,

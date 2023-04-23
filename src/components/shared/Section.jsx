@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import EditButtons from './EditButtons';
 
-function Section({ title, institution, dates, details }) {
+function Section({ index, title, institution, dates, details, deleteThis }) {
     const [editMode, setEditMode] = useState(false);
     const handleStatus = (status) => setEditMode(status);
 
@@ -57,7 +57,11 @@ function Section({ title, institution, dates, details }) {
                     value={inputDetails}
                 />
             </div>
-            <EditButtons modeStatus={(status) => handleStatus(status)} />
+            <EditButtons
+                index={index}
+                modeStatus={(status) => handleStatus(status)}
+                deleteIndex={deleteThis}
+            />
         </div>
     );
 }
