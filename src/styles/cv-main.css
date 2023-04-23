@@ -15,22 +15,16 @@
     width: 40%;
     display: flex;
     flex-direction: column;
-    /* gap: 16px; */
 }
 
 .section-title {
+    display: flex;
+    position: relative;
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     margin-top: 16px;
-}
-
-.section-title {
-    /* background: red; */
-    display: flex;
-    position: relative;
-    padding: 12px;
 }
 
 .section {
@@ -41,11 +35,12 @@
     position: relative;
 }
 
+.section-title .content,
 .section .content {
-    /* background: red; */
     padding: 12px;
 }
 
+.section-title .edit-inputs,
 .section .edit-inputs {
     position: absolute;
     border-radius: 4px;
@@ -54,20 +49,16 @@
     background: var(--white);
 }
 
-.section .btns {
-    position: absolute;
-    margin-left: calc(100% - 72px);
-    display: flex;
-    gap: 4px;
-    align-items: right;
-    margin-top: -16px;
-}
-
+.section-title:hover,
 .section:hover {
     background: var(--white);
     border-radius: 4px;
 }
 
+.section-title:hover .btns .btn-plus,
+.section-title:hover .btns .btn-edit,
+.section-title:hover .btns .btn-check,
+.section-title:hover .btns .btn-close,
 .section:hover .btns .btn-edit,
 .section:hover .btns .btn-check,
 .section:hover .btns .btn-close {
@@ -76,27 +67,34 @@
 
 /* SPECIFIC STYLES */
 
+.section-title .title,
 .section .title {
-    /* background: red; */
     font-size: 1.2rem;
 }
 
 .section input[type='text'].input-title {
-    /* background: red; */
     font-size: 1.2rem;
     margin-top: 6px;
 }
 
+.section-title input[type='text'].input-section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 6px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+}
+
 .section .dates,
 .section .institution {
-    /* background: red; */
     font-size: 0.8rem;
     padding-bottom: 8px;
 }
 
 .section input[type='text'].input-dates,
 .section input[type='text'].input-institution {
-    /* background: red; */
     height: 24px;
     font-size: 0.8rem;
     font-weight: 700;

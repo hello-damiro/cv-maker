@@ -69,6 +69,17 @@ a:hover {
     margin-top: 2px;
 }
 
+.btns {
+    width: 100%;
+    position: absolute;
+    margin: 0 -4px;
+    display: flex;
+    gap: 4px;
+    align-items: right;
+    justify-content: flex-end;
+    margin-top: -16px;
+}
+
 .btns .btn-edit {
     all: unset;
     cursor: pointer;
@@ -105,6 +116,20 @@ a:hover {
     opacity: 0;
 }
 
+.btns .btn-plus {
+    all: unset;
+    cursor: pointer;
+    width: 32px;
+    aspect-ratio: 1/1;
+    outline-offset: -4px;
+    outline: 2px solid var(--gray);
+    border-radius: 50%;
+    background: url('../assets/images/icon-close.svg') var(--white) no-repeat center center;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+.btns .btn-plus:hover,
 .btns .btn-edit:hover,
 .btns .btn-check:hover,
 .btns .btn-close:hover {

@@ -8,7 +8,7 @@ function EditButtons({ modeStatus }) {
         setEditMode((editMode = !editMode));
         modeStatus(editMode);
     };
-    const handleCloseBtn = () => console.log('handleCloseBtn');
+    const handleCloseBtn = () => console.log('CLOSE');
     return (
         <div className="btns">
             {!editMode ? (
