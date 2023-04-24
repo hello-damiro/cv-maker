@@ -51,7 +51,7 @@ a:hover {
 
 .paper {
     width: var(--paper-w);
-    height: var(--paper-h);
+    /* height: var(--paper-h); */
     background: var(--gray);
 }
 

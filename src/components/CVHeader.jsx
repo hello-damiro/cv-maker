@@ -1,34 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import About from './shared/About';
 import Person from './shared/Person';
 import Website from './shared/Website';
 import Links from './shared/Links';
+import cvData from '../data/CVData';
 
 function CVHeader() {
+    const [data] = useState(cvData);
     return (
         <div>
-            <div className="vertical-space"></div>
             <div className="cv-header">
                 <div className="left">
                     <Person
-                        firstname={'Samuelle'}
-                        lastname={'Loucas'}
-                        position={'Senior Truck Driver'}
+                        firstname={data.firstname}
+                        lastname={data.lastname}
+                        position={data.position}
                     />
-                    <About
-                        about={
-                            'Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
-                        }
-                    />
+                    <About about={data.about} />
                 </div>
                 <div className="right">
-                    <Website website={'www.ed-smith.dev'} />
+                    <Website website={data.website} />
                     <Links
-                        phone={'+56 1234 4567'}
-                        gmail={'ed.smith@gmail.com'}
-                        location={'New York, UK'}
-                        linkedin={'linkedin.com/ed-smith'}
-                        github={'github.com/ed-smith'}
+                        phone={data.contacts.phone}
+                        gmail={data.contacts.email}
+                        location={data.contacts.location}
+                        linkedin={data.contacts.linkedin}
+                        github={data.contacts.github}
                     />
                 </div>
             </div>

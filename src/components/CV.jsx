@@ -6,8 +6,10 @@ import CVMain from './CVMain';
 function CV() {
     return (
         <Paper>
+            <div className="vertical-space"></div>
             <CVHeader />
             <CVMain />
+            <div className="vertical-space"></div>
         </Paper>
     );
 }

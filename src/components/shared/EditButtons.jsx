@@ -20,7 +20,7 @@ function EditButtons({ modeStatus, deleteIndex }) {
                     type="button"
                 />
             ) : null}
-            <button onClick={deleteIndex} className="btn-close" type="button" />
+            {/* <button onClick={deleteIndex} className="btn-close" type="button" /> */}
         </div>
     );
 }
