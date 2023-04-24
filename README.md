@@ -18,7 +18,7 @@ In this project I worked with numerous functions of react, such as: `useState` a
 
 **Day 2/3:** Spent the whole day debugging why-tf `useState` is not giving obvious outputs. It turns out that the index of the delete button is not unique.
 
-**Day 4:** Had to install `uuid` and use it as keys, and use previous states of `useState` to manage updates of a variable to solve that devil like code problem. Yeah, I cried. 😭 Felt like I spent too much time debbuging an obvious problem. \* Pushed through implementing `BrowserRouter` for the `AboutPage`. Was able to pull it out with ease.
+**Day 4:** Had to install `uuid` and use it as keys, and use previous states of `useState` to manage updates of a variable to solve that devil like code problem. Yeah, I cried. 😭 Felt like I spent too much time debbuging an obvious problem. \* Pushed through implementing `BrowserRouter` for the `AboutPage`. Was able to pull it out with ease. BUT! when I uploaded, links went f up. so I decided not to implement it. I guess it wasnt really the time for implementing routes at the moment. Will update the files when I encounter it.
 
 ~~**Day 5:** I plan to use router to make an abouts page to display some about info. But havent studies react router, so it make another day for it. Havent started anything about that page so it may take more while.~~ \*
 

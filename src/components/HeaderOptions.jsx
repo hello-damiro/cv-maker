@@ -32,9 +32,9 @@ function HeaderOptions() {
             <div onClick={toPDF} className="download">
                 Download PDF
             </div>
-            <a href="/cv-maker/about">
+            {/* <a href="/cv-maker/about">
                 <div className="about">?</div>
-            </a>
+            </a> */}
         </div>
     );
 }
