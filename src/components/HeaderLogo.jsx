@@ -9,7 +9,7 @@ function HeaderLogo() {
             </h2>
             <div className="odin-logo"></div>
             <h2 className="title">
-                <a href="/">CV Maker</a>
+                <a href="/cv-maker/">CV Maker</a>
             </h2>
         </div>
     );
