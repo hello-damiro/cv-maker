@@ -1,10 +1,14 @@
 # cv-maker
 
-## Warning! This is a work n progress
+## The Odin Project - Intermediate JS project
 
-The Odin Project - Intermediate JS project
+SEE LIVE WORKING APP [HERE](http://hello-damiro.github.io/cv-maker)
 
-SEE LIVE PROGRESS [HERE](http://hello-damiro.github.io/cv-maker)
+</br>
+
+This is my first time creating a react-app from. I used `create-react-app` instead of my build of `webpack`. Found out the that `create-react-app` is also using `webpack`, silly that I did waste time configuring webpack from scratch.
+
+In this project I worked with numerous functions of react, such as: `useState` and `useEffect`. I also implemented a basic route for an about page. I struggled implementing `useState` at first since I didn't figure that it has a feature that you can access a variables previous state. Hopefully I can sustain learning react since this project is just scratching its surface.
 
 </br>
 
@@ -14,9 +18,9 @@ SEE LIVE PROGRESS [HERE](http://hello-damiro.github.io/cv-maker)
 
 **Day 2/3:** Spent the whole day debugging why-tf `useState` is not giving obvious outputs. It turns out that the index of the delete button is not unique.
 
-**Day 4:** Had to install `uuid` and use it as keys, and use previous states of `useState` to manage updates of a variable to solve that devil like code problem. Yeah, I cried. 😭 Felt like I spent too much time debbuging an obvious problem.
+**Day 4:** Had to install `uuid` and use it as keys, and use previous states of `useState` to manage updates of a variable to solve that devil like code problem. Yeah, I cried. 😭 Felt like I spent too much time debbuging an obvious problem. \* Pushed through implementing `BrowserRouter` for the `AboutPage`. Was able to pull it out with ease.
 
-**Day 5:** I plan to use router to make an abouts page to display some about info. But havent studies react router, so it make another day for it. Havent started anything about that page so it may take more while.
+~~**Day 5:** I plan to use router to make an abouts page to display some about info. But havent studies react router, so it make another day for it. Havent started anything about that page so it may take more while.~~ \*
 
 </br>
 
