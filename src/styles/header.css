@@ -70,3 +70,8 @@
     background: var(--yellow);
     border-radius: 50%;
 }
+
+.download {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}

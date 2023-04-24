@@ -1,5 +1,6 @@
 .abouts {
-    padding-left: var(--paper-margin);
+    padding: var(--paper-margin);
+    background: var(--gray);
 }
 
 .abouts a {
