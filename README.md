@@ -12,6 +12,10 @@ SEE LIVE PROGRESS [HERE](http://hello-damiro.github.io/cv-maker)
 
 **Day 2:** Worked with css to layout the CV. Study in-depth what `useState` is. Since there are numerous ways to style components in react, one is forced to design while coding. Thats my current case. I guess its just because I'm still exploring react.
 
+**Day 2/3:** Spent the whole day debugging why-tf `useState` is not giving obvious outputs. It turns out that the index of the delete button is not unique.
+
+**Day 4:** Had to install `uuid` and use it as keys, and use previous states of `useState` to manage updates of a variable to solve that devil like code problem. Yeah, I cried. 😭 Felt like I spent too much time debbuging an obvious problem.
+
 </br>
 
 ## Project Screenshot

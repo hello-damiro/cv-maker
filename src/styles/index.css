@@ -204,3 +204,37 @@ a:hover {
 .download:hover {
     color: var(--yellow);
 }
+
+.footer a {
+    color: var(--gray);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-top: 32px;
+    width: 160px;
+}
+
+.footer h4 {
+    margin-left: 8px;
+}
+
+.footer h4:hover {
+    color: var(--yellow);
+    margin-left: 8px;
+}
+
+.footer .img {
+    background: url('../assets/images/link-github.svg') var(--gray) no-repeat center center;
+    width: 24px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.footer .img:hover {
+    background-color: var(--yellow);
+}
