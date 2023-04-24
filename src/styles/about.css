@@ -1,0 +1,32 @@
+.abouts {
+    padding-left: var(--paper-margin);
+}
+
+.abouts a {
+    color: var(--blue);
+}
+
+.abouts-h1 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--green);
+    line-height: 1.8rem;
+    padding-bottom: 8px;
+}
+
+.abouts-btn {
+    all: unset;
+    cursor: pointer;
+    padding: 16px 32px;
+    background: var(--yellow);
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border-radius: 6px;
+}
+
+.abouts-btn:hover {
+    background: var(--white);
+}

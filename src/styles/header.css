@@ -62,6 +62,11 @@
     cursor: pointer;
 }
 
+.options .about a {
+    color: var(--blue);
+}
+
 .options .about:hover {
     background: var(--yellow);
+    border-radius: 50%;
 }

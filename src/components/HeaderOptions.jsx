@@ -18,7 +18,9 @@ function HeaderOptions() {
             <div onClick={toPDF} className="download">
                 Download PDF
             </div>
-            <div className="about">?</div>
+            <div className="about">
+                <a href="/about">?</a>
+            </div>
         </div>
     );
 }
