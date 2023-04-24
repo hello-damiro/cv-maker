@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/cv-maker/static/css/main.544aedaf.css",
-    "main.js": "/cv-maker/static/js/main.a92993c8.js",
+    "main.css": "/cv-maker/static/css/main.07dd4e4f.css",
+    "main.js": "/cv-maker/static/js/main.8d5dbea3.js",
+    "static/js/703.fc728420.chunk.js": "/cv-maker/static/js/703.fc728420.chunk.js",
+    "static/js/168.e8e2787d.chunk.js": "/cv-maker/static/js/168.e8e2787d.chunk.js",
     "static/media/link-github.svg": "/cv-maker/static/media/link-github.69a2cfcc41ae28d5128e.svg",
     "static/media/logo-odin-colored.svg": "/cv-maker/static/media/logo-odin-colored.5e2d5d2b362de7c2d14c.svg",
     "static/media/link-linkedin.svg": "/cv-maker/static/media/link-linkedin.c9f2b5bce9f61e2aed01.svg",
@@ -12,11 +14,13 @@
     "static/media/link-phone.svg": "/cv-maker/static/media/link-phone.fd59b4362e8eba8407fd.svg",
     "static/media/link-gmail.svg": "/cv-maker/static/media/link-gmail.fc016234f0b53d202af4.svg",
     "static/media/icon-check.svg": "/cv-maker/static/media/icon-check.4ccf08d6d68f69ee3e6a.svg",
-    "main.544aedaf.css.map": "/cv-maker/static/css/main.544aedaf.css.map",
-    "main.a92993c8.js.map": "/cv-maker/static/js/main.a92993c8.js.map"
+    "main.07dd4e4f.css.map": "/cv-maker/static/css/main.07dd4e4f.css.map",
+    "main.8d5dbea3.js.map": "/cv-maker/static/js/main.8d5dbea3.js.map",
+    "703.fc728420.chunk.js.map": "/cv-maker/static/js/703.fc728420.chunk.js.map",
+    "168.e8e2787d.chunk.js.map": "/cv-maker/static/js/168.e8e2787d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.544aedaf.css",
-    "static/js/main.a92993c8.js"
+    "static/css/main.07dd4e4f.css",
+    "static/js/main.8d5dbea3.js"
   ]
 }
