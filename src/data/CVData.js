@@ -69,21 +69,21 @@ const cvData = {
             {
                 title: 'Build-a-Brick Ecommerce Site',
                 institution: 'Brick City',
-                dates: '2019 - 2020',
+                dates: 'www.brickcity.app',
                 details:
                     'Developed a web-based platform for selling Lego bricks online. Built a custom shopping cart and payment system, and integrated with a third-party shipping API to ensure speedy and reliable delivery. Site received rave reviews from customers for its ease of use and eye-catching design.',
             },
             {
                 title: 'Space Adventures Website',
                 institution: 'Galactic Travel Co.',
-                dates: '2018 - 2019',
+                dates: 'www.galactictravel.co',
                 details:
                     'Worked on a website to promote space tourism, including designing an interactive itinerary planner and integrating with third-party hotel and transportation providers. Added some fun touches like a space-themed background and a virtual astronaut assistant named Bleep.',
             },
             {
                 title: 'Superhero Training App',
                 institution: 'Hero Academy',
-                dates: '2017 - 2018',
+                dates: 'www.heroacade.my',
                 details:
                     'Developed a mobile app to help aspiring superheroes train for their big debut. The app included video tutorials, workout plans, and a virtual reality simulation of a city in need of saving. The app was a hit with young superhero hopefuls and their parents alike.',
             },

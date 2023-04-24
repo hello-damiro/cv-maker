@@ -16,6 +16,8 @@ SEE LIVE PROGRESS [HERE](http://hello-damiro.github.io/cv-maker)
 
 **Day 4:** Had to install `uuid` and use it as keys, and use previous states of `useState` to manage updates of a variable to solve that devil like code problem. Yeah, I cried. 😭 Felt like I spent too much time debbuging an obvious problem.
 
+**Day 5:** I plan to use router to make an abouts page to display some about info. But havent studies react router, so it make another day for it. Havent started anything about that page so it may take more while.
+
 </br>
 
 ## Project Screenshot
