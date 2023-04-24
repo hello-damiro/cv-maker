@@ -1,14 +1,14 @@
 const cvData = {
     firstname: 'Bob',
     lastname: 'Builderman',
-    position: 'Founder and Lead Developer at Bob Builds',
+    position: 'Founder & Lead Developer at Bob Builds',
     website: 'www.bobbuilderman.com',
     about: 'I am a master builder with over 20 years of experience in the world of Lego. My passion for creating amazing Lego structures began at a young age and has only grown stronger over the years. I believe that the only limits in Lego building are the ones we set for ourselves.',
     contacts: {
         phone: '+1 555 1234',
         email: 'bob@bobbuilderman.com',
         location: 'Brickville, USA',
-        linkedin: 'linkedin.com/bob-builderman',
+        linkedin: 'linkedin.com/in/bob-builderman',
         github: 'github.com/bobbuilderman',
     },
     experience: {

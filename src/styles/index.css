@@ -196,3 +196,11 @@ a:hover {
     flex-direction: row;
     align-items: center;
 }
+
+.download {
+    cursor: pointer;
+}
+
+.download:hover {
+    color: var(--yellow);
+}
