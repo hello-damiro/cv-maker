@@ -38,6 +38,7 @@
 .section-title .content,
 .section .content {
     padding: 12px;
+    white-space: pre-wrap;
 }
 
 .section-title .edit-inputs,
@@ -47,6 +48,10 @@
     width: 100%;
     height: 100%;
     background: var(--white);
+}
+
+.section .edit-inputs {
+    min-height: 116px;
 }
 
 .section-title:hover,

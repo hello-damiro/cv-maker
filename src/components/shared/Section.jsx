@@ -1,10 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import EditButtons from './EditButtons';
 
 function Section({ index, title, institution, dates, details, deleteThis }) {
-    const [editMode, setEditMode] = useState(false);
-    const handleStatus = (status) => setEditMode(status);
+    let [editMode, setEditMode] = useState(false);
+    const handleBtn = () => setEditMode((editMode = !editMode));
 
     const [inputTitle, setInputTitle] = useState(title);
     const [inputInstitution, setInputInstitution] = useState(institution);
@@ -52,16 +51,23 @@ function Section({ index, title, institution, dates, details, deleteThis }) {
                 <textarea
                     onChange={handleDetailsChange}
                     className="input-details"
-                    // rows="3"
                     placeholder="Details here ..."
                     value={inputDetails}
                 />
             </div>
-            <EditButtons
-                index={index}
-                modeStatus={(status) => handleStatus(status)}
-                deleteIndex={deleteThis}
-            />
+            <div className="btns">
+                {!editMode ? (
+                    <button onClick={() => handleBtn()} className="btn-edit" type="button" />
+                ) : null}
+                {editMode ? (
+                    <button
+                        onClick={() => handleBtn()}
+                        className={`btn-check ${!editMode ? 'hidden' : ''}`}
+                        type="button"
+                    />
+                ) : null}
+                <button onClick={() => deleteThis(index)} className="btn-close" type="button" />
+            </div>
         </div>
     );
 }

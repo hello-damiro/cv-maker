@@ -3,7 +3,7 @@ import Paper from './shared/Paper';
 import CVHeader from './CVHeader';
 import CVMain from './CVMain';
 
-function CV(props) {
+function CV() {
     return (
         <Paper>
             <CVHeader />

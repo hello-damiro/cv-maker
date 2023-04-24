@@ -2,14 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-function EditButtons({ index, modeStatus, deleteIndex }) {
+function EditButtons({ modeStatus, deleteIndex }) {
     let [editMode, setEditMode] = useState(false);
     const handleBtn = () => {
         setEditMode((editMode = !editMode));
         modeStatus(editMode);
-    };
-    const handleCloseBtn = () => {
-        deleteIndex(index);
     };
     return (
         <div className="btns">
@@ -23,7 +20,7 @@ function EditButtons({ index, modeStatus, deleteIndex }) {
                     type="button"
                 />
             ) : null}
-            <button onClick={() => handleCloseBtn()} className="btn-close" type="button" />
+            <button onClick={deleteIndex} className="btn-close" type="button" />
         </div>
     );
 }
